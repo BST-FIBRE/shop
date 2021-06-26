@@ -1,0 +1,151 @@
+section {
+    min-height: 100vh;
+    width: 100vw;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative;
+}
+
+section img.wave {
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+}
+
+section div.content-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 175px;
+    padding-bottom: 100px;
+}
+
+section div.content-form form {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .05);
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 45px 50px;
+    border-radius: 10px;
+    z-index: 100;
+}
+
+section div.content-form form div.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+section div.content-form form div.title h1 {
+    color: var(--red-1);
+    font-family: 'Bahnschrift';
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 2rem;
+    text-align: center;
+}
+
+section div.content-form form div.title  span {
+    margin: 0;
+    font-family: 'Bahnschrift';
+    font-size: 1rem;
+    color: #90CBCB;
+    background: rgb(144,203,203);
+    background: linear-gradient(180deg, rgba(144,203,203,1) 0%, rgba(79,117,120,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    text-align: center;
+    line-height: 15px;
+}
+
+@media (max-width: 767px) {
+    section div.content-form {
+        padding-top: 100px;
+    }
+}
+
+@media (max-width: 600px) {
+    section div.content-form form div.title h1 {
+        font-size: 1.6rem;
+    }
+    section div.content-form form div.title span {
+        font-size: .8rem;
+    }
+}
+
+section div.content-form form label {
+    color: var(--red-2);
+    font-family: 'Bahnschrift';
+    margin: 0;
+    margin-top: 25px;
+    margin-left: 5px;
+}
+
+section div.content-form form input, section div.content-form form input:hover {
+    background-color: #F6F6F6 !important;
+    color: #2B2B2B;
+    border: none;
+    height: 40px;
+    border-radius: 5px;
+}
+
+section div.content-form form div.btn-content {
+    align-self: center;
+}
+
+section div.content-form form div.btn-content button {
+    border-radius: 10px;
+    background-color: var(--red-1);
+    height: 40px;
+    text-align: center;
+    color: #fff;
+    border: 0;
+    padding: 0 25px;
+    margin-top: 25px;
+    width: 100%;
+}
+section div.content-form form div.btn-content button,
+section div.content-form form div.btn-content a {
+    transition: .3s all;
+}
+section div.content-form form div.btn-content button:hover,
+section div.content-form form div.btn-content a:hover {
+    transform: scale(1.1);
+}
+section div.content-form form div.btn-content button:active,
+section div.content-form form div.btn-content a:active {
+    transform: scale(.9);
+}
+
+section div.content-form form div.btn-content a {
+    border-radius: 10px;
+    background-color: #F7F7F7;
+    height: 40px;
+    color: var(--red-2);
+    border: 0;
+    padding: 0 25px;
+    margin-top: 15px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 15px;
+}
+
+.verify {
+    font-family: 'Bahnschrift';
+}

@@ -1,0 +1,311 @@
+body, section {
+    background-color: #fff !important;
+}
+
+div.products div.banner {
+    max-width: 100%;
+    margin-top: 25px;
+    margin-left: 15px;
+}
+
+div.products div.banner img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+div.products div.title {
+    margin-top: 50px;
+    width: 100%;
+    margin-bottom: 35px;
+    margin-left: 15px;
+}
+
+div.products div.title h1 {
+    color: var(--red-1);
+    font-family: 'Bahnschrift';
+    font-size: 2.4rem;
+    margin: 0;
+}
+
+div.products div.title h1 span {
+    color: var(--red-2);
+    font-family: 'Bahnschrift';
+    font-size: 1.2rem;
+}
+
+div.products div.title p.path {
+    color: var(--red-2);
+    font-family: 'Bahnschrift';
+    font-size: 1rem;
+    margin: 0;
+}
+
+div.products div.title p.path a {
+    color: var(--red-2);
+    font-family: 'Bahnschrift';
+    font-size: 1rem;
+    text-decoration: underline;
+}
+
+@media (max-width: 991px) {
+    div.products div.title h1 {
+        font-size: 2rem;
+    }
+
+    div.products div.title h1 span {
+        font-size: 1rem;
+    }
+
+    div.products div.title p.path {
+        font-size: .8rem;
+    }
+
+    div.products div.title p.path a {
+        font-size: .8rem;
+    }
+}
+
+div.products div.title p.path a:hover {
+    color: var(--red-1);
+    text-decoration: underline !important;
+}
+
+div.products div.title p.path a.disabled, div.products div.title p.path a.disabled:hover {
+    color: var(--red-2);
+    text-decoration: none !important;
+    cursor: default;
+}
+
+div.products {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+}
+
+div.products div.product {
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
+    padding: 15px;
+    margin: 10px;
+    width: 250px;
+    transition: .3s all;
+    cursor: pointer;
+}
+div.products div.product:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+    transform: scale(1.05);
+}
+div.products div.product:active {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+    transform: scale(.9);
+}
+
+@media (max-width: 1025px) {
+    div.products div.product {
+        width: 225px;
+    }
+}
+
+@media (max-width: 991px) {
+    div.products div.product {
+        width: 200px;
+    }
+}
+
+@media (max-width: 581px) {
+    div.products div.product {
+        width: 100%;
+    }
+}
+
+div.products div.product div.image {
+    border-radius: 10px;
+    background-color: #F2F2F2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+div.products div.product div.image img {
+    max-height: 100px;
+    max-width: 100px;
+}
+
+div.products div.product div.image button {
+    border-radius: 10px;
+    background-color: var(--red-1);
+    border: none;
+    height: 20%;
+    width: 20%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: .3s all;
+}
+
+div.products div.product div.image a img {
+    height: 15px;
+}
+div.products div.product div.image a:hover {
+    transform: scale(1.1);
+}
+div.products div.product div.image a:active {
+    transform: scale(.9);
+}
+div.products div.product div.image a:hover img {
+    animation: jump-rotate .7s;
+}
+
+div.products div.product div.title {
+    width: 100%;
+    margin: 0;
+    margin-top: 15px;
+}
+
+div.products div.product div.title h3 {
+    color: var(--red-1);
+    font-family: 'Bahnschrift';
+    font-size: 1.2rem;
+    margin: 0;
+    line-height: 1.1rem;
+}
+
+div.products div.product div.title span {
+    color: #CCCCCC;
+    font-family: 'Bahnschrift';
+    font-size: .9rem;
+}
+
+div.products div.product div.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.products div.product div.footer a.more {
+    font-family: 'Bahnschrift';
+    font-size: .7rem;
+    color: #2B2B2B;
+    transition: .3s all;
+}
+div.products div.product div.footer a.more:hover {
+    color: var(--red-1);
+    transform: scale(1.1);
+}
+
+div.products div.product div.footer a.more img {
+    height: 10px;
+    margin-left: 5px;
+}
+
+div.products div.product div.footer div.cost {
+    background-color: #F8F8F8;
+    border-radius: 10px;
+    height: 60px;
+    padding: 15px;
+    text-align: center;
+}
+
+div.products div.product div.footer div.cost p {
+    color: var(--red-1);
+    font-family: 'Bahnschrift';
+    font-size: 1rem;
+    margin: 0;
+    line-height: .9rem;
+}
+
+div.products div.product div.footer div.cost p span {
+    font-size: .7rem;
+}
+
+div.products div.product div.footer div.cost div.stock-circle {
+    height: 7.5px;
+    width: 7.5px;
+    border-radius: 50%;
+    background-color: #2B2B2B;
+    margin-right: 5px;
+}
+
+
+div.products div.product div.footer div.cost div.stock{
+    color: #2B2B2B;
+    font-size: .6rem;
+    font-family: 'Bahnschrift';
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+div.stock-green {
+    background-color: #75E169 !important;
+}
+
+div.stock-orange {
+    background-color: #E1A569 !important;
+}
+
+div.stock-red {
+    background-color: #C23335 !important;
+}
+
+div.filter {
+    position: fixed;
+    height: 100vh;
+    left: 0;
+    width: 25vw;
+    background-color: #B2191B;
+    z-index: 10000;
+    transition: .3s all;
+}
+div.filter button.open{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 50px;
+    width: 50px;
+    background-color: #C23335;
+    border: none;
+}
+div.filter button.open img{
+    height: 15px;
+    transform: rotate(180deg);
+}
+div.retract {
+    --retract: calc(-1 * 100% + 50px);
+    transform: translateX(var(--retract));
+}
+div.retract button.open img{
+    height: 15px;
+    transform: rotate(0);
+}
+@media (max-width: 991px) {
+    div.filter {
+        width: 45vw;
+    }
+    div.retract {
+        --retract: calc(-1 * 100% + 40px);
+    }
+    div.filter button.open{
+        height: 40px;
+        width: 40px;
+    }
+}
+@media (max-width: 563px) {
+    div.filter {
+        width: 100%;
+    }
+}

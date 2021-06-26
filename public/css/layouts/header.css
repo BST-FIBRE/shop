@@ -1,0 +1,501 @@
+header {
+    position: fixed;
+    min-height: 165px;
+    width: 100vw;
+
+    top: 0;
+    left: 0;
+
+    z-index: 1000;
+}
+
+header #bar {
+    padding: 0 calc(8.3333333333vw + 15px);
+    height: 100px;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+    position: relative;
+}
+
+header #bar #logo {
+    height: 65px;
+}
+
+header #bar form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 25vw;
+}
+
+header #bar input[type="search"] {
+    height: 45px;
+    line-height:60px;
+    box-sizing: border-box;
+    border-radius: 10px 0 0 10px;
+    border: 2px solid #EBEBEB;
+    border-right: none;
+    padding: 10px 15px;
+    color: #2B2B2B;
+    font-family: 'Bahnschrift';
+    font-size: 1rem;
+    line-height: 50px;
+    width: calc(100% - 45px);
+    transition: .3s all;
+}
+
+header #bar input[type="search"]:hover::placeholder {
+    color: #cfcfcf;
+}
+
+header #bar input[type="search"]::placeholder {
+    color: #DFDFDF;
+}
+
+header #bar input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  height: 1em;
+  width: 1em;
+  border-radius: 50em;
+  background: url(https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/times-circle.svg) no-repeat 50% 50%;
+  background-size: contain;
+  opacity: 0;
+  pointer-events: none;
+}
+
+header #bar input[type="search"]:focus::-webkit-search-cancel-button {
+  opacity: .3;
+  pointer-events: all;
+}
+header #bar button[type="submit"] {
+    height: 45px;
+    width: 45px;
+    border-radius: 0 10px 10px 0;
+    box-sizing: border-box;
+    background-color: var(--red-1);
+    border: none;
+}
+header #bar button[type="submit"] img {
+    height: 18px;
+}
+header #bar button[type="submit"]:hover {
+    background-color: var(--red-2);
+}
+header #bar button[type="submit"]:hover img {
+    transform: scale(1.1);
+}
+
+header #bar #nav-auth {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header #bar #nav-auth div.nav-box-auth {
+    margin: 0 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+    height: 55px;
+    border-radius: 10px;
+    transform: .7s all;
+}
+
+header #bar #nav-auth div.nav-box-auth:hover img {
+    animation: jump-rotate .7s;
+}
+header #bar #nav-auth div.nav-box-auth:hover {
+    transform: scale(1.1);
+    background-color: #f1f1f1;
+}
+
+header #bar #nav-auth div.nav-box-auth span {
+    color: var(--red-2);
+    font-family: 'Bahnschrift';
+    margin-left: 10px;
+    line-height: 15px;
+}
+
+header #bar #nav-auth div.nav-box-auth #nav-store {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 10px;
+}
+
+header #bar #nav-auth div.nav-box-auth #nav-store span{
+    margin: 0;
+    line-height: 15px;
+    transform: .7s all;
+}
+
+header #bar #nav-auth div.nav-box-auth #nav-store span:nth-child(2){
+    color: var(--red-1);
+}
+
+header nav {
+    min-height: 65px;
+    width: 100vw;
+    background-color: #F9F9F9;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    z-index: 1010;
+
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
+    animation: show-nav 1s;
+}
+
+header nav a.nav-item {
+    height: 65Px;
+    padding: 0 25px;
+    margin: 0 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-family: 'Bahnschrift';
+    color: var(--red-2) !important;
+    transition: .3s all;
+}
+
+header nav a.nav-item:hover {
+    background-color: var(--red-1);
+    color: #fff !important;
+    /* transform: scale(1.1); */
+}
+
+header nav a.nav-item:active {
+    transform: scale(.9);
+}
+
+@media (max-width: 800px) {
+    header #bar #logo {
+        height: 45px;
+    }
+}
+
+#nav-m {
+    display: none;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    height: 75px;
+    width: 100vw;
+    bottom: 0;
+    left: 0;
+    background-color: #F9F9F9;
+    box-shadow: 0 0 35px rgba(0, 0, 0, .1);
+    z-index: 100000;
+}
+
+#nav-m .nav-m-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    width: calc(100% / 3);
+    padding: 0 10px;
+}
+#nav-m .nav-m-box div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    width: 100%;
+}
+
+#nav-m .nav-m-box:hover img {
+    animation: jump-rotate .7s;
+}
+#nav-m .nav-m-box:hover {
+    transform: scale(1.1);
+    background-color: #f1f1f1;
+}
+
+#nav-m .nav-m-box span {
+    color: var(--red-2);
+    font-family: 'Bahnschrift';
+    font-size: .9rem;
+}
+@media (max-width: 767px) {
+    header {
+        height: 130px;
+        min-height: 130px;
+    }
+    header #bar {
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 130px;
+    }
+    header #bar #logo {
+        height: 35px;
+    }
+    header #bar form {
+        width: 100%;
+    }
+    header #bar #nav-auth {
+        display: none;
+    }
+    header nav {
+        display: none;
+    }
+    #nav-m {
+        display: flex;
+    }
+    header {
+        box-shadow: 0 0 35px rgba(0, 0, 0, .1);
+    }
+}
+
+.hide-nav {
+    transform: translateY(-125%);
+    animation: hide-nav 1s;
+}
+
+.hide-nav div.submenu {
+    display: none;
+}
+
+.show-nav {
+    animation: show-nav 1s;
+}
+
+@keyframes show-nav {
+    0% {
+        transform: translateY(-125%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes show-invert {
+    0% {
+        transform: translateY(+100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes hide-nav {
+    0% {
+        transform: translateY(0);
+        display: flex;
+    }
+    50% {
+        transform: translateY(-125%);
+        display: flex;
+    }
+    100% {
+        transform: translateY(-125%);
+        display: none;
+    }
+}
+
+header div.submenu {
+    position: fixed;
+    height: auto;
+    top: 165px;
+    left: 0;
+    width: 100vw;
+    background-color: #F9F9F9;
+    padding: 0 calc(8.3333333333vw + 15px);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    display: none;
+    box-shadow: 0 0 35px rgba(0, 0, 0, .1);
+    z-index: -1;
+    padding-bottom: 25px;
+}
+
+header nav div.submenu div.category {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: calc(100% / 3);
+    margin-top: 25px;
+}
+
+header nav div.submenu div.category a.big {
+    color: #2B2B2B;
+    font-family: 'Bahnschrift';
+    font-size: 1.1rem;
+}
+header nav div.submenu div.category div.sub-little {
+    display: flex;
+    flex-direction: row;
+    justify-self: start;
+    align-items: center;
+}
+header nav div.submenu div.category div.sub-little img{
+    margin-left: 5px;
+}
+header nav div.submenu div.category a.little {
+    color: #4d4d4d;
+    font-family: 'Bahnschrift';
+    font-size: .9rem;
+    margin-left: 10px;
+}
+
+header nav div.submenu div.category a:hover {
+    color: var(--red-1);
+}
+
+@media (max-width: 767px) {
+    header div.submenu {
+        top: 130px;
+    }
+}
+
+header .nav-fa:hover > .submenu {
+    display: flex;
+}
+
+div.close-menu-m {
+    position: fixed;
+    height: calc(100vh - 75px);
+    top: 0;
+    left: 80vw;
+    width: 20vw;
+}
+
+nav.nav-menu-m {
+    position: fixed;
+    height: calc(100vh - 75px);
+    top: 0;
+    left: 0;
+    width: 80vw;
+    background-color: #F9F9F9;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 125px;
+    align-items: center;
+    /* display: none; */
+    box-shadow: 0 0 35px rgba(0, 0, 0, .1);
+    padding-bottom: 25px;
+    z-index: 10001;
+    transition: .3s all;
+    transform: translateX(-125%);
+}
+nav.nav-menu-m .nav-item {
+    width: 100%;
+    padding: 15px 10%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--red-2);
+    font-family: 'Bahnschrift';
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+}
+nav.nav-menu-m .nav-item span {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--red-2);
+    font-family: 'Bahnschrift';
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+}
+nav.nav-menu-m .nav-item img.icon {
+    margin-top: -5px;
+    margin-right: 10px;
+    height: 15px;
+}
+nav.nav-menu-m .nav-item:hover {
+    background-color: #eeeeee;
+}
+nav.nav-menu-m .nav-item div.round {
+    background-color: #f5f5f5;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+nav.nav-menu-m div.nav-item div.round img {
+    height: 15px;
+    margin: 0;
+}
+nav.nav-menu-m div.nav-back {
+    margin-top: 50px;
+    justify-content: flex-start;
+}
+nav.nav-menu-m div.nav-back div.round img {
+    transform: rotate(180deg);
+}
+nav.nav-menu-m div.nav-back div.round {
+    margin-right: 25px;
+}
+nav.nav-menu-m img.logo {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50px;
+}
+
+nav.nav-menu-m div.submenu-m {
+    transform: translateX(-125%);
+    position: fixed;
+    height: calc(100vh - 75px);
+    top: 0;
+    left: 0;
+    width: 80vw;
+    background-color: #F9F9F9;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 25px;
+    padding-top: 125px;
+    z-index: 1001;
+    transition: .3s all;
+}
+
+
+nav.nav-menu-m div.sub-little {
+    transform: translateX(-125%);
+    position: fixed;
+    height: calc(100vh - 75px);
+    top: 0;
+    left: 0;
+    width: 80vw;
+    background-color: #F9F9F9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 25px;
+    z-index: 1001;
+    transition: .3s all;
+}

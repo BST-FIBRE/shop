@@ -1,0 +1,117 @@
+nav#menu {
+    height: 100vh;
+    width: 15vw;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .06);
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .3s all;
+}
+nav#menu button.open {
+    display: none;
+    position: fixed;
+    top: 130px;
+    left: 80vw;
+    width: 20vw;
+    height: 20vw;
+    border: none;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .06);
+    z-index: -1;
+    transition: .3s all;
+    color: #6b242c;
+    font-family: 'Bahnschrift';
+    font-size: .6rem;
+    text-transform: uppercase;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+nav#menu button.open img {
+    transform: rotate(180deg);
+    margin-bottom: 10px;
+}
+.retract button.open img {
+    transform: rotate(0deg) !important;
+}
+@media (max-width: 1600px) {nav#menu {width: 20vw;}}
+@media (max-width: 1200px) {nav#menu {width: 25vw;}}
+@media (max-width: 991px) {nav#menu {width: 30vw;}}
+@media (max-width: 768px) {
+    nav#menu {
+        width: 80vw;
+    }
+    nav#menu button.open {
+        display: flex;
+    }
+    .retract {
+        transform: translateX(-80vw);
+    }
+}
+nav#menu div
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+nav#menu div a
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    color: #2B2B2B;
+    font-family: 'Bahnschrift';
+    font-size: 1rem;
+    transition: .3s all;
+}
+
+nav#menu a img
+{
+    width: 25px;
+    margin-right: 10px;
+}
+
+nav#menu div .yellow:hover {color: #FFD676;}
+nav#menu div .blue:hover {color: #67D7FF;}
+nav#menu div .purple:hover {color: #CB8BDF;}
+nav#menu div .red:hover {color: #C23335;}
+
+nav#menu button.exit
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    color: #2B2B2B;
+    font-family: 'Bahnschrift';
+    font-size: 1rem;
+    transition: .3s all;
+    border: 0;
+    background: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+nav#menu button.exit img
+{
+    margin-right: 10px;
+}
+
+@media (max-width: 767px) {
+    nav#menu {
+        height: calc(100vh - 75px);
+    }
+}

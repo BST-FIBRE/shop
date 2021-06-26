@@ -1,0 +1,19 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "Boutique B.S.T Fibre",
+  "legalName": "B.S.T FIBRE",
+  "description": "Vente de matériel et d'outillage",
+  "image": "https://shop.bst-fibre.com/img/meta.png",
+  "logo": "https://shop.bst-fibre.com/img/logo.png",
+  "url": "https://shop.bst-fibre.com",
+  "telephone": "0987088787",
+  "email": "services@bst-fibre.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "4a Quai Quarriet",
+    "addressLocality": "Lormont",
+    "postalCode": "33310",
+    "addressCountry": "France"
+  }
+}

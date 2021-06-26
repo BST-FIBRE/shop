@@ -1,0 +1,38 @@
+{
+    "@context": "http://schema.org/",
+    "@type": "Product",
+    "name": "Nom du produit",
+    "image": "www.exemple.fr/image.jpg",
+    "description": "Description du produit",
+    "brand": "Marque du produit",
+    "category": "Test",
+    "manufacturer": "Produit par",
+    "offers": {
+        "@type": "Offer",
+        "priceCurrency": "EUR",
+        "price": "29",
+        "url": "https://shop.bst-fibre.com/item/939",
+        "availability": "https://schema.org/ItemAvailability",
+        "seller": {
+            "@type": "Organization",
+            "name": "B.S.T Fibre"
+        }
+    },
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.4",
+        "reviewCount": "89"
+    },
+    "review": {
+        "@type": "Review",
+        "reviewBody": "Bla bla bla",
+        "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5"
+        },
+        "author": {
+            "@type": "Person",
+            "name": "Quentin SAR"
+        }
+    }
+}

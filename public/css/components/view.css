@@ -1,0 +1,654 @@
+* {
+    scroll-behavior: smooth !important;
+}
+
+body {
+    background-color: #fff !important;
+}
+
+section.view {
+    width: 100vw;
+    height: 100vh;
+}
+
+section.view div.title {
+    margin-top: 25px;
+    width: 100%;
+    margin-bottom: 35px;
+    margin-left: 15px;
+}
+
+section.view div.title h1 {
+    color: var(--red-1);
+    font-family: 'Bahnschrift';
+    font-size: 2.4rem;
+    margin: 0;
+}
+
+section.view div.title h1 span {
+    color: var(--red-2);
+    font-family: 'Bahnschrift';
+    font-size: 1.2rem;
+}
+
+section.view div.title p.path {
+    color: var(--red-2);
+    font-family: 'Bahnschrift';
+    font-size: 1rem;
+    margin: 0;
+}
+
+section.view div.title p.path a {
+    color: var(--red-2);
+    font-family: 'Bahnschrift';
+    font-size: 1rem;
+    text-decoration: underline;
+}
+
+@media (max-width: 991px) {
+    section.view div.title h1 {
+        font-size: 2rem;
+    }
+
+    section.view div.title h1 span {
+        font-size: 1rem;
+    }
+
+    section.view div.title p.path {
+        font-size: .8rem;
+    }
+
+    section.view div.title p.path a {
+        font-size: .8rem;
+    }
+}
+
+section.view div.title p.path a:hover {
+    color: var(--red-1);
+    text-decoration: underline !important;
+}
+
+section.view div.title p.path a.disabled, section.view div.title p.path a.disabled:hover {
+    color: var(--red-2);
+    text-decoration: none !important;
+    cursor: default;
+}
+
+section.view div.pcard {
+    height: calc(20vw + 30px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
+    padding: 15px;
+}
+
+section.view div.pcard div.img {
+    width: 20vw;
+    height: 20vw;
+    background-color: #F2F2F2;
+    box-sizing: initial;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: crosshair;
+    z-index: 101;
+}
+
+section.view div.pcard div.img img {
+    height: 70%;
+}
+
+section.view div.pcard div.img div.preview {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #F2F2F2;
+    height: 25vw;
+    width: 25vw;
+    overflow: hidden;
+    z-index: 100000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, .2);
+    display: none;
+}
+
+@media (min-width: 768PX) {
+    section.view div.pcard div.img img:hover ~ div.preview {
+        display: block;
+    }
+}
+
+section.view div.pcard div.img div.preview img {
+    height: 50vw;
+    width: 50vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@media (max-width: 991px) {
+    section.view div.pcard div.img div.preview {
+        height: 50vw;
+        width: 50vw;
+    }
+    section.view div.pcard div.img div.preview img {
+        height: 75vw;
+        width: 75vw;
+    }
+}
+
+@media (max-width: 767PX) {
+    section.view div.pcard div.img div.preview {
+        height: 80vw;
+        width: 80vw;
+        /* display: flex; */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+section.view div.pcard form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: calc(100% - 20vw);
+    z-index: 100;
+}
+
+section.view div.pcard div.infos {
+    width: 70%;
+    padding: 0 15px;
+}
+
+section.view div.pcard div.infos h1 {
+    color: var(--red-1);
+    font-family: 'Bahnschrift';
+    font-size: 2rem;
+    margin: 0;
+    line-height: 1.9rem;
+}
+
+section.view div.pcard div.infos span {
+    color: #CCCCCC;
+    font-family: 'Bahnschrift';
+    font-size: 1.2rem;
+}
+
+section.view div.pcard div.infos p {
+    color: #2B2B2B;
+    font-family: 'Bahnschrift';
+    font-size: .9rem;
+    margin: 0;
+}
+
+section.view div.pcard div.shop {
+    width: 30%;
+}
+
+section.view div.pcard div.shop div.cost {
+    width: 100%;
+    background-color: #F8F8F8;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+}
+
+section.view div.pcard div.shop div.cost p {
+    color: var(--red-1);
+    font-family: 'Bahnschrift';
+    font-size: 2rem;
+    margin: 0;
+    margin-top: 5px;
+    line-height: 1.9rem;
+}
+
+section.view div.pcard div.shop div.cost p span {
+    font-size: 1rem;
+}
+
+section.view div.pcard div.shop div.cost div.stock-circle {
+    height: 7.5px;
+    width: 7.5px;
+    border-radius: 50%;
+    background-color: #2B2B2B;
+    margin-right: 5px;
+}
+
+section.view div.pcard div.shop div.cost div.stock{
+    color: #2B2B2B;
+    font-size: .9rem;
+    font-family: 'Bahnschrift';
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+div.stock-green {
+    background-color: #75E169 !important;
+}
+
+div.stock-orange {
+    background-color: #E1A569 !important;
+}
+
+div.stock-red {
+    background-color: #C23335 !important;
+}
+
+section.view div.pcard div.shop div.quantity {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    margin-top: 15px;
+}
+
+section.view div.pcard div.shop div.quantity button {
+    width: 20%;
+    height: 100%;
+    border: 2px solid #F2F2F2;
+    color: var(--red-1);
+    background-color: #fff;
+    border-radius: 10px 0 0 10px;
+    transition: .3s all;
+    font-size: 1.3rem;
+}
+
+section.view div.pcard div.shop button.add-shop {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--red-1);
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    height: 40px;
+    margin-top: 15px;
+    font-family: 'Bahnschrift';
+    font-size: .9rem;
+    color: #fff;
+}
+
+section.view div.pcard div.shop button.add-shop img {
+    height: 15px;
+    margin-right: 15Px;
+}
+
+section.view div.pcard div.shop div.quantity button:hover {
+    background-color: #F2F2F2;
+}
+
+section.view div.pcard div.shop div.quantity button:active {
+    transform: scale(0.9);
+}
+
+section.view div.pcard div.shop div.quantity button:nth-child(3) {
+    border-radius: 0 10px 10px 0;
+}
+
+section.view div.pcard div.shop div.quantity input {
+    width: 60%;
+    height: 100%;
+    border: none;
+    border-top: 2px solid #F2F2F2;
+    border-bottom: 2px solid #F2F2F2;
+    text-align: center;
+    color: var(--red-1);
+    font-family: 'Bahnschrift';
+    padding-top: 5px;
+}
+
+@-webkit-keyframes shake {
+    0%, 100% {-webkit-transform: translateX(0) rotate(0deg) translateY(0);}
+    15%, 35%, 55%, 75%, 95% {-webkit-transform: translateX(-1px) rotate(-2deg) ;}
+    25%, 45%, 65%, 85% {-webkit-transform: translateX(1px) rotate(2deg); }
+    10%, 30%, 50%, 70%, 90% {-webkit-transform: translateY(1px);}
+    20%, 40%, 60%, 80% {-webkit-transform: translateY(-1px); }
+}
+@-moz-keyframes shake {
+    0%, 100% {-moz-transform: translateX(0) rotate(0deg) translateY(0);}
+    15%, 35%, 55%, 75%, 95% {-moz-transform: translateX(-1px) rotate(-2deg) ;}
+    25%, 45%, 65%, 85% {-moz-transform: translateX(1px) rotate(2deg); }
+    10%, 30%, 50%, 70%, 90% {-moz-transform: translateY(1px);}
+    20%, 40%, 60%, 80% {-moz-transform: translateY(-1px); }
+}
+
+@-o-keyframes shake {
+     0%, 100% {-o-transform: translateX(0) rotate(0deg) translateY(0);}
+    15%, 35%, 55%, 75%, 95% {-o-transform: translateX(-1px) rotate(-2deg) ;}
+    25%, 45%, 65%, 85% {-o-transform: translateX(1px) rotate(2deg); }
+    10%, 30%, 50%, 70%, 90% {-o-transform: translateY(1px);}
+    20%, 40%, 60%, 80% {-o-transform: translateY(-1px); }
+}
+
+@keyframes shake {
+    0%, 100% {transform: translateX(0) rotate(0deg) translateY(0);}
+    15%, 35%, 55%, 75%, 95% {transform: translateX(-1px) rotate(-2deg) ;}
+    25%, 45%, 65%, 85% {transform: translateX(1px) rotate(2deg); }
+    10%, 30%, 50%, 70%, 90% {transform: translateY(1px);}
+    20%, 40%, 60%, 80% {transform: translateY(-1px); }
+}
+.shake {
+    -webkit-animation-name: shake;
+    -moz-animation-name: shake;
+    -o-animation-name: shake;
+    animation-name: shake;
+    -webkit-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    -o-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-transition-timing-function:linear;
+}
+
+section.view a.more {
+    height:50px;
+    margin-top: 50px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: var(--red-1);
+    text-align: center;
+    color: #fff;
+    font-family: 'Bahnschrift';
+    font-size: 1rem;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: .3s all;
+}
+
+section.view a.more:hover {
+    box-shadow: inset 0 0 100vw rgba(255, 255, 255, .1);
+    transform: scale(1.02);
+}
+
+section.view a.more div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: .3s all;
+}
+
+section.view a.more div img {
+    height: 7.5px;
+    margin-left: 5px;
+}
+
+section.view div#more {
+    padding: 75px 0;
+    padding-top: 125px;
+}
+
+section.view div#more div.more-box {
+    margin-top: 25px;
+}
+
+section.view div#more div.more-box div.right-align {
+    position: absolute;
+    right: 0;
+}
+
+section.view div#more div.more-box h2 {
+    color: var(--red-1);
+    font-family: 'Bahnschrift';
+    font-size: 1.4rem;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+section.view div#more div.more-box h2 img {
+    height: 20px;
+    margin-top: -5px;
+}
+section.view div#more div.more-box h2 img:nth-child(1) {
+    margin-left: 15px;
+}
+
+section.view div#more div.more-box h2::after {
+    position: absolute;
+    content: ' ';
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 50px;
+    background-color: #F2F2F2;
+}
+
+section.view div#more div.more-box p {
+    color: #2B2B2B;
+    font-family: 'Bahnschrift';
+    font-size: .8rem;
+    position: relative;
+    white-space: pre-line;
+}
+
+section.view div#more div.more-box div.products {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    position: relative;
+}
+
+section.view div#more div.more-box button.arrow{
+    background: none;
+    border: none;
+    height: 50px;
+    width: 25px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    background-color: #ffffff;
+    border-radius: 0 5px 5px 0;
+    transition: .3s all;
+}
+
+section.view div#more div.more-box button.arrow:hover{
+    background-color: var(--red-1);
+}
+
+section.view div#more div.more-box button#right{
+    right: 0;
+    border-radius: 5px 0 0 5px;
+}
+
+section.view div#more div.more-box div.products button.arrow svg {
+    height: 25Px;
+}
+
+section.view div#more div.more-box button.arrow:hover svg path{
+    fill: #ffffff !important;
+}
+
+section.view div#more div.more-box div.products::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+section.view div#more div.more-box div.products div.product {
+    width: 175px;
+}
+
+section.view div#more div.more-box div.reviews {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 0;
+    padding-top: 25px;
+}
+
+section.view div#more div.more-box div.review {
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
+    padding: 15px;
+    margin: 10px;
+    width: 300px;
+    transition: .3s all;
+    cursor: pointer;
+    position: relative;
+}
+
+section.view div#more div.more-box div.review div.stars {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    transform: translateY(-50%);
+}
+
+section.view div#more div.more-box div.review div.stars img {
+    height: 20px;
+}
+
+section.view div#more div.more-box div.review p {
+    font-family: 'Bahnschrift';
+    font-size: .7rem;
+    color: #2B2B2B;
+    margin: 0;
+    margin-top: 15px;
+}
+
+section.view div#more div.more-box div.review span {
+    font-family: 'Bahnschrift';
+    font-size: .7rem;
+    color: var(--red-1);
+    margin-top: 15px;
+    text-align: right;
+}
+
+@media (max-width: 991px) {
+    section.view div.pcard div.infos h1 {
+        font-size: 1.5rem;
+        line-height: 1.4rem;
+    }
+    section.view div.pcard div.infos span {
+        font-size: 1rem;
+    }
+    section.view div.pcard div.infos p {
+        font-size: .7rem;
+    }
+    section.view div.pcard div.shop div.cost{
+        padding: 10px;
+    }
+    section.view div.pcard div.shop div.quantity{
+        margin-top: 10px;
+    }
+    section.view div.pcard div.shop button.add-shop {
+        margin-top: 10px;
+    }
+    section.view div.pcard div.shop div.cost p {
+        font-size: 1.4rem;
+        line-height: 1.3rem;
+    }
+    section.view div.pcard div.shop button.add-shop {
+        font-size: .7rem;
+    }
+    section.view div#more div.more-box div.review {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1200px) {
+    section.view div.pcard div.img {
+        width: 15vw;
+        height: 15vw;
+    }
+    section.view div.pcard {
+        height: calc(15vw + 30px);
+    }
+    section.view div.pcard form {
+        width: calc(100% - 15vw);
+    }
+}
+
+@media (min-width: 1400px) {
+    section.view div.pcard div.img {
+        width: 13vw;
+        height: 13vw;
+    }
+    section.view div.pcard {
+        height: calc(13vw + 30px);
+    }
+    section.view div.pcard form {
+        width: calc(100% - 13vw);
+    }
+}
+
+@media (max-width: 767px) {
+    section.view div.pcard {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        height: auto;
+    }
+    section.view div.pcard form {
+        order: 3;
+        width: 100%;
+        flex-wrap: wrap;
+        margin-top: -10vh;
+    }
+    section.view div.pcard div.infos {
+        order: 3;
+        width: 100%;
+        margin-top: 25px;
+        padding: 0 5px;
+    }
+    section.view div.pcard div.shop {
+        order: 2;
+        width: 100%;
+        margin-left: calc(10vh + 15px);
+        margin-right: 15px;
+    }
+    section.view div.pcard div.img {
+        width: 10vh;
+        height: 10vh;
+    }
+    section.view div.pcard div.shop div.cost {
+        height: 10vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    section.view div#more div.more-box button.arrow{
+        display: none;
+    }
+}
