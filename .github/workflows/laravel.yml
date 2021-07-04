@@ -28,7 +28,5 @@ jobs:
       run: /usr/bin/php -r "file_exists('.env') || copy('.env.example', '.env');"
     - name: Generate key
       run: /usr/bin/php artisan key:generate
-    - name: Generate Minify files
-      run: /usr/bin/npm run prod
     - name: Maintenance Mode Down
       run: /usr/bin/php artisan up
