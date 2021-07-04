@@ -14,18 +14,14 @@ jobs:
     steps:
     - uses: shivammathur/setup-php@15c43e89cdef867065b0213be354c2841860869e
       with:
-        php-version: '7.4'
+        php-version: '8.0'
     - uses: actions/checkout@v2
     - name: Install Composer Dependencies
       run: /usr/local/bin/composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
     - name: Maintenance Mode Up
       run: /usr/bin/php artisan down
-    - name: Install Node JS Dependencies
-      run: /usr/bin/npm install
     - name: Update Composer Dependencies
       run: /usr/local/bin/composer update
-    - name: Update Node JS Dependencies
-      run: /usr/bin/npm update
     - name: Copy .env
       run: /usr/bin/php -r "file_exists('.env') || copy('.env.example', '.env');"
     - name: Generate key
